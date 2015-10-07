@@ -1,0 +1,57 @@
+.active
+  right: 0px !important
+
+.nav-current
+  & > a
+    color: $color_yellow !important
+
+.Nav
+  z-index: 1000
+  +flex(row, space-between, center)
+  // background: $color_black
+  position: absolute
+  left: 0
+  right: 0
+  padding: 30px 45px
+
+  &-brand
+    width: 134px
+    img
+      width: 100%
+
+  &-icons
+    &--menuIcon
+      margin-right: 1em
+
+  &-list
+    position: fixed
+    right: -225px
+    top: 0
+    background: rgba($color_black, 0.9)
+    width: 225px
+    +flex(column, start, center)
+    height: 100vh
+    border-left: 3px solid $color_yellow
+    transition: 0.4s right ease
+
+    &--closeIcon
+      color: white
+      position: absolute
+      right: 0
+      margin: 1em 1.2em
+      font-size: 20px
+
+    &-links
+      list-style-type: none
+      margin: 8em 0 0 0
+      padding: 0
+      li
+        padding: 1em 0
+        .circleIcon
+          margin-right: 10px
+          font-size: 10px
+        a
+          +flex(row, start, center)
+          color: white
+          text-transform: uppercase
+          font-weight: $font_bold
