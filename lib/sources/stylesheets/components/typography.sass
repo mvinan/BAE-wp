@@ -1,0 +1,53 @@
+//typography
+@import url("//fonts.googleapis.com/css?family=Lato:400,900,300");
+@import url("//fonts.googleapis.com/css?family=Oswald:400,300");
+
+body
+  font-family: $font_family_regular
+  font-size: $font_size_regular
+
+.Title
+  font-size: $font_size_title
+  font-family: $font_family_primary
+  font-weight: $font_light
+
++desktop
+  .Title
+    font-size: $font_size_title + 22px !important
+
++desktop-HD
+  .Title
+    font-size: $font_size_title + 32px !important
+
+.Subtitle
+  font-size: $font_size_subtitle
+  font-family: $font_family_primary
+  text-transform: uppercase
+  line-height: 1.4
+
+
++desktop
+  .Subtitle
+    font-size: $font_size_subtitle + 16px !important
+
+h3
+  font-size: $font_size_h3
+  font-family: $font_family_regular
+
+h4
+  font-size: $font_size_h4
+  font-family: $font_family_primary
+
+p
+  font-size: $font_size_regular
+  font-family: $font_family_regular
+  line-height: 23px
+
+a
+  font-size: $font_size_regular
+  font-family: $font_family_regular
+  transition: 0.2s
+
+  &:hover
+    color: $color_yellow !important
+    text-decoration: none

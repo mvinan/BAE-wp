@@ -1,0 +1,22 @@
+.Cover
+  background: $color_black
+  height: 650px
+  position: relative
+
+  &-header
+    position: relative
+    top: 50%
+    left: 0
+    transform: translate(0,-50%)
+    .Title
+      text-transform: uppercase
+      font-size: $font_size_title
+
++desktop
+  .Cover
+    height: 100vh
+
+    &-header
+      .Title
+        width: 740px
+        margin-bottom: 0.5em
