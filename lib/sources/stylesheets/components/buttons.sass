@@ -1,11 +1,9 @@
 //Icons
-.menu-button
-  padding: 12px 17px
+.btn-menu
+  padding: 10px 20px
   color: white
   background: rgba(black, 0.5)
   border: none
-  .icon
-    margin-right: 0.5em
   &:hover, &:focus
     background: rgba(black, 0.7)
     color: white
@@ -20,11 +18,12 @@
   padding: 20px 40px
   background: $color_yellow
   text-transform: uppercase
+  font-weight: $font_bold
   border: none
   border-radius: 3px
   transition: 0.3s
   &:hover, &:focus, &:active
-    background: darken($color_yellow, 7%)
+    background: darken($color_yellow, 10%)
     color: darken(white, 5%) !important
 
 .btn-secondary
@@ -34,5 +33,13 @@
 
 .btn-default
   border-radius: 3px
+  border: 1px solid rgba(white, 0.5)
   &:active
     color: white !important
+
+//
+.icon
+  margin-right: 0.5em
+
+.icons-list
+  font-size: 12px !important

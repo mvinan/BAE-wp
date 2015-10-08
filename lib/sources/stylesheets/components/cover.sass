@@ -1,0 +1,22 @@
+.Cover
+  background-color: $color_black
+  background-position: center center
+  background-size: cover
+  background-repeat: no-repeat
+  height: 650px
+  position: relative
+  width: 100%
+  top: 0
+  left: 0
+  overflow: hidden
+  .container
+    height: 100%
+    +flex(column, center, start)
+  &-header
+    margin-bottom: 1em
+
++desktop
+  .Cover
+    height: 100vh
+    &-header
+      width: 700px

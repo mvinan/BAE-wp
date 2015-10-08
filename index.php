@@ -1,6 +1,4 @@
 <?php get_header(); ?>
+<?php include(locate_template('layouts/cover.php')); ?>
 
-<div class="u-whiteContent">
-  <h1 class="Title">Holaaaa </h1>
-</div>
 <?php get_footer(); ?>
