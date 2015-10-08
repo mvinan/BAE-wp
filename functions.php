@@ -44,3 +44,8 @@
 		add_theme_support( 'custom-header');
 	}
 	add_action('after_setup_theme','custom_theme_setup');
+
+/**
+ * Posts Types Literaturas, Colecciones, Actividades, Noticias.
+ */
+  include(locate_template('layouts/functions-postTypes.php'));
