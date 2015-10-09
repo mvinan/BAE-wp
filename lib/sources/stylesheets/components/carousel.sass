@@ -3,9 +3,13 @@
   // height: 100%
   .carousel-inner
     height: 100%
+    overflow: hidden
     .item
       height: 100%
       .img-carousel
         height: 100%
-        background-position: center center
-        background-size: cover
+        img
+          position: absolute
+          top: 0
+          left: 0
+          transform: translate(0,-20%)

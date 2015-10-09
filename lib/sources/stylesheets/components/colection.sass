@@ -1,0 +1,61 @@
+.Colection
+  height: 350px
+  position: relative
+  &:hover .Colection-box
+    background-color: $color_yellow
+  &-box
+    height: 300px
+    width: 100%
+    background-color: white
+    position: absolute
+    top: 0
+    left: 0
+    border-radius: 3px
+    transition: 0.3s ease
+
+  &-content
+    +flex(row, start, center)
+    position: absolute
+    top: 0
+    transform: translate(0, 25%)
+
+    .content
+      width: 100%
+      height: 200px
+      +flex(column, center, start)
+      margin-left: 1em
+      header
+      article
+        p
+          font-size: 14px
+          line-height: 1.3
+    .image
+      visibility: hidden
+      width: 200px
+      height: 200px
+      background-color: $color_bluegray
+      background-position: center center
+      background-size: cover
+      position: absolute
+      top: 0
+      right: 0
+      transform: translate(50%, 0)
+      border-radius: 3px
+
+  &-button
+    position: absolute
+    bottom: 0
+    transform: translate(0%, -50%)
+
+
++tablet
+  .Colection
+    &-box
+      width: 80%
+
+    &-content
+      +flex(row, start, center)
+      .content
+        width: 70%
+      .image
+        visibility: visible

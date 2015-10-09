@@ -7,14 +7,13 @@
   padding-left: 0
 
   &-content
-    +flex(column, center, center)
+    +flex(column, center, start)
 
     .Subtitle
       margin-top: 0
       margin-bottom: 30px
     &--description
       margin-bottom: 30px
-
   &-carousel
     margin-top: 5em
 
@@ -29,8 +28,14 @@
       padding-left: 15px
 
       .Description-content
+        +flex(column, center, start)
         padding-right: 0
         padding-left: 0
 
       .Description-carousel
         margin-top: 0
+
++desktop
+  .Description
+    &-content
+      padding-right: 10px !important

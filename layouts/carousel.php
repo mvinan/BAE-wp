@@ -10,22 +10,19 @@
   <!-- Wrapper for slides -->
   <div class="carousel-inner">
 
+    <?php rewind_posts(); ?>
+    <?php query_posts('post_per_page=4&post_type=literatura') ?>
     <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-      <a href="<?php the_permalink(); ?>">
-        <h3><?php the_title();?></h3>
-      </a>
 
-      <figure>
-        <?php the_post_thumbnail('large'); ?>
-			</figure>
+      <div class="item">
+        <a href=" <?php the_permalink() ?> " class="img-carousel">
+          <?php the_post_thumbnail('large'); ?>
+        </a>
+			</div>
 
 			<?php endwhile; else : ?>
 				<p><?php _e( 'Lo sentimos, algo esta roto, intenta agregar un post por favor.' ); ?></p>
 			<?php endif; ?>
-
-    <div class="item {{#if @first}} active {{/if}}">
-      <a href="{{url}}"><div style="background-image:url('{{image}}')" class="img-carousel"/> </div></a>
-    </div>
 
   </div>
 </div>
