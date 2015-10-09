@@ -9,7 +9,7 @@
           <?php the_author_image(); ?>
         </header>
         <footer class="AuthorInfo">
-          <small class="Fecha"> <?php the_time('j F, Y') ?> </small>
+          <small class="Date"> <?php the_time('j F, Y') ?> </small>
           <h6> <?php the_author() ?> </h6>
         </footer>
       </div>

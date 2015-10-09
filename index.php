@@ -36,11 +36,22 @@
   </article>
 </section>
 
-<!-- Coleccion -->
+<!-- Colections -->
 <section class="Colections u-blackWrapper u-whiteContent">
   <article class="container">
     <h2 class="Subtitle text-center" style="margin:80px 0;">Colección</h2>
     <?php include(locate_template('layouts/colection.php')); ?>
+  </article>
+</section>
+
+<!-- News -->
+<section class="News">
+  <article class="container">
+    <h2 class="Subtitle text-center" style="margin:80px 0">Noticias</h2>
+
+    <div class="News-list">
+      <?php include(locate_template('layouts/news.php')); ?>
+    </div>
   </article>
 </section>
 

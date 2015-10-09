@@ -40,7 +40,7 @@
 	function custom_theme_setup(){
 		add_theme_support('post-thumbnails');
 		// format to declarate = ($name , $width , $heigh, $crop(boolean))
-		add_image_size('mini-thumbnails',300,300,true);
+		add_image_size('full-thumbnails',1200,800,true);
 		add_theme_support( 'custom-header');
 	}
 	add_action('after_setup_theme','custom_theme_setup');
