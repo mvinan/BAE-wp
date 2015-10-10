@@ -18,13 +18,6 @@
 
       </div>
 
-
-
-
-
-
-
-
     <?php endwhile; else : ?>
       <p><?php _e( 'Lo sentimos, algo esta roto, intenta agregar un post por favor.' ); ?></p>
     <?php endif; ?>
@@ -32,6 +25,31 @@
 
   </section>
   <div class="Copyright">
+
+    <div class="container">
+      <div class="Copyright-brand">
+        <div class="Brand">
+          <a href="//utpl.edu.ec"><img class="brand-image" src="<?= get_template_directory_uri().'/assets/images/UTPLlogo.png'?> " alt=" Universidad Técnica Particular de Loja" /></a>
+        </div>
+        <div class="SocialChannels">
+          <ul class="SocialChannels-list">
+            <li><a href="#" class="fa fa-google-plus"></a></li>
+            <li><a href="#" class="fa fa-facebook"></a></li>
+            <li><a href="#" class="fa fa-instagram"></a></li>
+            <li><a href="#" class="fa fa-twitter"></a></li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+      <div class="Copyright-author">
+        <div class="container">
+          <div class="wrapper">
+            <p>2015 ©Copyright,Biblioteca básica de autores ecuatorianos </p>
+            <p> powered by <a href="http://miguelvinan.com">@miguelviñan</a></p>
+          </div>
+        </div>
+      </div>
 
   </div>
 </footer>

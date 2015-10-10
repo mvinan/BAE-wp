@@ -18,8 +18,8 @@
       opacity: 0.98
     .container
       position: relative
-      // width: 100%
       +flex(row, center, start)
+      flex-wrap: wrap
       top: 0
       left: 0
       .content
@@ -71,7 +71,7 @@
             bottom: 0
             right: 0
             transform: translate(-50%, -50%)
-            background: $color_black
+            background: $color_darkgray
             padding: 10px 40px
             font-weight: $font_bold
             font-size: $font_size_regular
@@ -80,3 +80,59 @@
             box-shadow: 0 2px 4px rgba($color_black, 0.5)
           input[type="checkbox"]
             background: red
+.Copyright
+  background-color: $color_black
+  padding: 30px 0 0 0
+  &-brand
+    +flex(column, center,center)
+    flex-wrap: wrap
+
+    .Brand
+      margin-bottom: 20px
+      .brand-image
+        width: 200px
+    .SocialChannels
+      &-list
+        list-style-type: none
+        +flex(row, start , center)
+        li
+          margin-right: 1.5em
+          .fa-facebook
+            padding: 10px 14px
+          a
+            color: white
+            padding: 10px
+            border: 1px solid white
+            border-radius: 50%
+            &:hover
+              border-color: $color_yellow
+  &-author
+    padding: 6px 0
+    background-color: $color_darkgray
+    margin-top: 15px
+    .container
+      .wrapper
+        +flex(column, space-between, center)
+        flex-wrap: wrap
+        p
+          color: #FFFCDE
+          font-size: 14px
+          margin-bottom: 0
+          text-align: center
+
++tablet
+  .Copyright
+    &-brand
+      +flex(row, space-between, center)
+      .Brand
+        margin-bottom: 0
+    &-author
+      .container
+        .wrapper
+          +flex(row, space-between, center)
+
++desktop
+  .Contact
+    &-wrapper
+      .container
+        flex-wrap: nowrap
