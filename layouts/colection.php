@@ -1,5 +1,15 @@
 <?php rewind_posts(); ?>
-<?php query_posts('post_per_page=4&post_type=colecciones&order=ASC') ?>
+
+<?php
+$args = array(
+  'post_type' => 'page',
+  'order' => 'DES',
+  'post_per_page' => '4',
+  'post__in' => array(88,91,104,106)
+  );
+query_posts($args);
+?>
+
 <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 
   <div class="Colection col-md-6">
@@ -12,7 +22,9 @@
             <h4> <?php the_title(); ?> </h4>
           </header>
           <article class="u-whiteContent">
-            <p> <?php the_excerpt(); ?> </p>
+            <p>
+              <?= substr(get_the_excerpt(), 0,250); ?>
+            </p>
           </article>
         </div>
 
@@ -27,7 +39,7 @@
     </div>
 
     <div class=" Colection-button">
-      <a href=" <?php the_permalink() ?> " class="btn btn-secondary">ver más</a>
+      <a href=" <?php the_permalink() ?> " class="btn btn-secondary">ver colección</a>
     </div>
 
   </div>

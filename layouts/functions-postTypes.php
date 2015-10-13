@@ -2,7 +2,7 @@
 /**
 * Adding Post Types Perzonalized
 */
-add_action( 'init', 'literature_post_type' );
+add_action( 'init', 'literature_post_type', 0 );
 function literature_post_type() {
 
     $labels = array(
@@ -22,12 +22,15 @@ function literature_post_type() {
   $args = array(
     'labels'          => $labels,
     'public'          => true,
-    'taxonomies'      => array('category','post_tag'),
+    'taxonomies'      => array('category'),
     'supports'        => array( 'title', 'editor', 'thumbnail','excerpt','author' ),
     'show_in_menu'    => true,
     'menu_position'   => 4,
     'can_export'      => true,
-    'capability_type' => 'page'
+    'has_archive'     => true,
+    'capability_type'     => 'post'
+
+
   );
 
   register_post_type('Literatura', $args );
@@ -35,7 +38,7 @@ function literature_post_type() {
 
 //Actividades
 
-add_action( 'init', 'activities_post_type' );
+add_action( 'init', 'activities_post_type', 0 );
 function activities_post_type() {
 
     $labels = array(
@@ -55,52 +58,22 @@ function activities_post_type() {
   $args = array(
     'labels'          => $labels,
     'public'          => true,
-    'taxonomies'      => array('category','post_tag'),
+    'taxonomies'      => array('category'),
     'supports'        => array( 'title', 'editor', 'thumbnail','excerpt','author' ),
     'show_in_menu'    => true,
     'menu_position'   => 4,
     'can_export'      => true,
-    'capability_type' => 'page'
+    'has_archive'     => true,
+    'capability_type'     => 'post'
+
+
   );
 
   register_post_type('Actividades', $args );
 }
-//Coleccion
-
-add_action( 'init', 'colections_post_type' );
-function colections_post_type() {
-
-    $labels = array(
-    'name'               => __( 'Colecciones' ),
-    'singular_name'      => __( 'Colecciones' ),
-    'add_new_item'       => __( 'Agregar nueva', 'your-plugin-textdomain' ),
-    'new_item'           => __( 'Nueva coleccion', 'your-plugin-textdomain' ),
-    'edit_item'          => __( 'Editar coleccion', 'your-plugin-textdomain' ),
-    'view_item'          => __( 'Ver coleccion', 'your-plugin-textdomain' ),
-    'all_items'          => __( 'Todas las colecciones', 'your-plugin-textdomain' ),
-    'search_items'       => __( 'Buscar coleccion', 'your-plugin-textdomain' ),
-    'parent_item_colon'  => __( 'Parent Books:', 'your-plugin-textdomain' ),
-    'not_found'          => __( 'Colecciones no encontradas.', 'your-plugin-textdomain' ),
-    'not_found_in_trash' => __( 'Colecciones no encontrados en la papelera.', 'your-plugin-textdomain' )
-      );
-
-  $args = array(
-    'labels'          => $labels,
-    'public'          => true,
-    'taxonomies'      => array('category', 'post_tag'),
-    'supports'        => array( 'title', 'editor', 'thumbnail','excerpt','author' ),
-    'show_ui'         => true,
-    'show_in_menu'    => true,
-    'menu_position'   => 4,
-    'can_export'      => true,
-    'capability_type' => 'page'
-  );
-
-  register_post_type('Colecciones', $args );
-}
 //Noticias
 
-add_action( 'init', 'news_post_type' );
+add_action( 'init', 'news_post_type', 0 );
 function news_post_type() {
 
     $labels = array(
@@ -120,13 +93,15 @@ function news_post_type() {
   $args = array(
     'labels'          => $labels,
     'public'          => true,
-    'taxonomies'      => array('category', 'post_tag'),
+    'taxonomies'      => array('category'),
     'supports'        => array( 'title', 'editor', 'thumbnail','excerpt','author' ),
     'show_ui'         => true,
     'show_in_menu'    => true,
     'menu_position'   => 4,
     'can_export'      => true,
-    'capability_type' => 'page'
+    'has_archive'     => true,
+    'capability_type'     => 'post'
+
   );
 
   register_post_type('Noticias', $args );

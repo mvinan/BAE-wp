@@ -1,5 +1,5 @@
 <?php rewind_posts(); ?>
-<?php query_posts('post_per_page=2&post_type=noticias&order=ASC') ?>
+<?php query_posts(array ('posts_per_page' => 2, 'post_type'=> 'noticias' )) ?>
 <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 
   <div class="New u-blackWrapper col-md-6">
@@ -11,7 +11,7 @@
     </header>
 
     <?php
-      $thumb = wp_get_attachment_image_src( get_post_thumbnail_id( $post -> ID ), 'medium' );
+      $thumb = wp_get_attachment_image_src( get_post_thumbnail_id( $post -> ID ), 'large' );
       $url = $thumb['0'];
     ?>
 
@@ -19,7 +19,7 @@
     <div class="image-news u-whiteContent" style="background-image:url('<?= $url ?>');">
     </div>
     <footer class="news-button">
-      <a href="#" class="btn btn-primary">Leer más</a>
+      <a href=" <?php the_permalink() ?> " class="btn btn-primary">Leer más</a>
     </footer>
 
 

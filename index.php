@@ -1,5 +1,5 @@
 <?php get_header(); ?>
-<?php include(locate_template('layouts/cover.php')); ?>
+<?php include(locate_template('layouts/cover-home.php')); ?>
 
 <!-- Description -->
 <section class="Description u-whiteContent u-blackWrapper">

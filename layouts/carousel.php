@@ -11,7 +11,7 @@
   <div class="carousel-inner">
 
     <?php rewind_posts(); ?>
-    <?php query_posts('post_per_page=4&post_type=literatura') ?>
+    <?php query_posts(array ('posts_per_page' => 4, 'post_type'=> 'literatura')) ?>
     <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 
       <div class="item">
