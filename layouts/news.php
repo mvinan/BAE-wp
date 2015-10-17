@@ -1,0 +1,31 @@
+<?php rewind_posts(); ?>
+<?php query_posts(array ('posts_per_page' => 2, 'post_type'=> 'noticias' )) ?>
+<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+
+  <div class="New u-blackWrapper col-md-6">
+
+    <header>
+      <h4> <?php the_title(); ?> </h4>
+      <small class="Date"> <?php the_time('j F, Y') ?> </small>
+      <?php the_excerpt(); ?>
+    </header>
+
+    <?php
+      $thumb = wp_get_attachment_image_src( get_post_thumbnail_id( $post -> ID ), 'large' );
+      $url = $thumb['0'];
+    ?>
+
+
+    <div class="image-news" style="background-image:url('<?= $url ?>');">
+    </div>
+    <footer class="news-button">
+      <a href=" <?php the_permalink() ?> " class="btn btn-primary">Leer más</a>
+    </footer>
+
+
+  </div>
+
+<?php endwhile; else : ?>
+  <p><?php _e( 'Lo sentimos, algo esta roto, intenta agregar un post por favor.' ); ?></p>
+<?php endif; ?>
+<?php wp_reset_query(); ?>

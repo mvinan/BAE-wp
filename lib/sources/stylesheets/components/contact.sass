@@ -1,0 +1,138 @@
+.Contact
+  &-wrapper
+    background-color: $gradient-yellow
+    background-size: cover
+    background-position: center center
+    position: relative
+    height: auto
+    width: 100%
+    padding: 80px 0
+    &:before
+      content: " "
+      background: $gradient-yellow
+      position: absolute
+      top: 0
+      left: 0
+      height: 100%
+      width: 100%
+      opacity: 0.95
+    .container
+      position: relative
+      +flex(row, center, start)
+      flex-wrap: wrap
+      top: 0
+      left: 0
+      .content
+        +flex(column, space-between, start)
+        height: 300px
+        max-height: 600px
+        ul
+          +flex(column, center, start)
+          list-style-type: none
+          padding-left: 0
+          li
+            margin-bottom: 0.5em
+            +flex(row, end, center)
+            i
+              margin-right: 1em
+            &:nth-child(1),
+            &:nth-child(2)
+              i
+                margin-right: 15px
+                &::before
+                  font-size: 22px
+            &:nth-child(2)
+              i
+                margin-right: 20px
+                padding-left: 3px
+
+      div[role="form"]
+        form
+          input,
+          textarea
+            background: rgba(white, 0.4)
+            border: 1px solid rgba(black, 0.4)
+            border-radius: 3px
+            padding: 10px 10px
+            color: $color_black
+            font-weight: $font_regular
+            width: 100%
+          textarea
+            resize: vertical
+            min-heihgt: 200px
+            max-height: 300px
+          div[role="alert"]
+            position: absolute
+            bottom: 0
+            left: 0
+          input[type="submit"]
+            width: auto
+            position: absolute
+            bottom: 0
+            right: 0
+            transform: translate(-50%, -50%)
+            background: $color_darkgray
+            padding: 10px 40px
+            font-weight: $font_bold
+            font-size: $font_size_regular
+            color: white
+            text-transform: uppercase
+            box-shadow: 0 2px 4px rgba($color_black, 0.5)
+          input[type="checkbox"]
+            background: red
+.Copyright
+  background-color: $color_black
+  padding: 30px 0 0 0
+  &-brand
+    +flex(column, center,center)
+    flex-wrap: wrap
+
+    .Brand
+      margin-bottom: 20px
+      .brand-image
+        width: 200px
+    .SocialChannels
+      &-list
+        list-style-type: none
+        +flex(row, start , center)
+        li
+          margin-right: 1.5em
+          .fa-facebook
+            padding: 10px 14px
+          a
+            color: white
+            padding: 10px
+            border: 1px solid white
+            border-radius: 50%
+            &:hover
+              border-color: $color_yellow
+  &-author
+    padding: 6px 0
+    background-color: $color_darkgray
+    margin-top: 15px
+    .container
+      .wrapper
+        +flex(column, space-between, center)
+        flex-wrap: wrap
+        p
+          color: #FFFCDE
+          font-size: 14px
+          margin-bottom: 0
+          text-align: center
+
++tablet
+  .Copyright
+    &-brand
+      +flex(row, space-between, center)
+      .Brand
+        margin-bottom: 0
+    &-author
+      .container
+        .wrapper
+          +flex(row, space-between, center)
+
++desktop
+  .Contact
+    &-wrapper
+      .container
+        flex-wrap: nowrap

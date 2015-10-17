@@ -1,3 +1,5 @@
 <?php get_header() ?>
-  Soy page
+
+  Hola soy taxonomy
+
 <?php get_footer() ?>

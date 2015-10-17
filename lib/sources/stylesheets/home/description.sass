@@ -1,23 +1,21 @@
 .Description
   padding: 5em 0
-  .container
 
-    .Description-content,
-    .Description-carousel
-    padding-right: 0
-    padding-left: 0
+  &-content,
+  &-carousel
+  padding-right: 0
+  padding-left: 0
 
-    .Description-content
-      +flex(column, center, center)
+  &-content
+    +flex(column, center, start)
 
-      .Subtitle
-        margin-top: 0
-        margin-bottom: 30px
-      &--description
-        margin-bottom: 30px
-
-    .Description-carousel
-      margin-top: 5em
+    .Subtitle
+      margin-top: 0
+      margin-bottom: 30px
+    &--description
+      margin-bottom: 30px
+  &-carousel
+    margin-top: 5em
 
 +tablet
   .Description
@@ -30,8 +28,14 @@
       padding-left: 15px
 
       .Description-content
+        +flex(column, center, start)
         padding-right: 0
         padding-left: 0
 
       .Description-carousel
         margin-top: 0
+
++desktop
+  .Description
+    &-content
+      padding-right: 10px !important

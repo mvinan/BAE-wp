@@ -9,7 +9,7 @@ body
 .Title
   font-size: $font_size_title
   font-family: $font_family_primary
-  font-weight: $font_light
+  font-weight: $font_bold
   text-transform: uppercase
   margin-top: 0
 
@@ -35,14 +35,38 @@ body
 h3
   font-size: $font_size_h3
   font-family: $font_family_regular
+  font-weight: $font_bold
 
 h4
   font-size: $font_size_h4
   font-family: $font_family_primary
+  text-transform: uppercase
+
++desktop
+  h4
+    font-size: $font_size_h4 + 10px
+
+
+h5
+  font-size: $font_size_h5
+  font-family: $font_family_regular
+  font-weight: $font_bold
+
+h6
+  font-size: $font_size_h6
+  font-family: $font_family_regular
+  font-weight: $font_bold
+  text-transform: uppercase
+  color: $color_yellow
+
+small
+  font-size: $font_size_small
+  font-family: $font_family_regular
 
 p
   font-size: $font_size_regular
   font-family: $font_family_regular
+  font-weight: $font_regular
   line-height: 23px
 
 a
@@ -53,3 +77,21 @@ a
   &:hover
     color: $color_yellow !important
     text-decoration: none
+
+.Date
+  color: $color_lightgray
+  font-size: 14px
+  font-weight: $font_bold
+
+.post-categories
+  list-style-type: none
+  padding-left: 0
+  li
+    a
+      color: $color_lightgray
+      padding: 5px 15px
+      border: 1px solid rgba($color_lightgray, 0.5)
+      border-radius: 3px
+      &:hover
+        color: darken($color_lightgray, 10%) !important
+        background: rgba($color_lightgray, 0.2)

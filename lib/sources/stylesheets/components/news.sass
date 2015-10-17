@@ -1,0 +1,37 @@
+.News-list
+  +flex(column, start, center)
+  margin-bottom: 80px
+  .New
+    width: 100%
+    height: 500px
+    margin-bottom: 100px
+    border-radius: 0 0 3px 3px
+    border-top: 3px solid $color_yellow
+    &:nth-child(odd)
+      margin-right: 15px
+    h4
+      margin: 20px 0
+    .image-news
+      position: absolute
+      bottom: 0
+      left: 0
+      right: 0
+      margin: 0 auto
+      width: 90%
+      height: 300px
+      background-repeat: no-repeat
+      background-position: center center
+      background-size: cover
+      border-radius: 3px
+      box-shadow: 0px 4px 8px rgba($color_black, 0.2)
+      transform: translate(0, 20%)
+    .news-button
+      position: absolute
+      bottom: 0
+      transform: translate(25%, 160%)
+
++tablet
+  .News-list
+    +flex(row, center, start)
+    .New
+      width: 47%

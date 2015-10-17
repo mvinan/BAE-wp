@@ -1,0 +1,55 @@
+.Activities
+  .Subtitle
+    margin-top: 80px
+    margin-bottom: 80px
+
+  &-list
+
+    .Activity // <--- Activity
+      +flex(column, center, center)
+      margin-bottom: 30px
+      padding-bottom: 30px
+      border-bottom: 1px solid rgba($color_lightgray, 0.3)
+      &-author
+        +flex(column, center, center)
+        .AuthorPhoto
+          margin: 0 auto
+          width: 100px
+          margin-bottom: 35px
+          .entry_author_image
+            width: 100%
+            img
+              width: 100%
+              border-radius: 100%
+
+        .AuthorInfo
+          +flex(column, center, center)
+          .Date
+            text-align: right
+          h6
+            margin-top: 0
+
+      &-content
+        .TitleActivity
+          h3
+            margin-top: 0
+          small
+            .post-categories
+              +flex(row, start , start)
+              margin-top: 15px
+              li
+                margin-right: 10px
+        .DescriptionActivity
+          margin-top: 23px
+          margin-bottom: 30px
+
+        .ButtonActivity
+          text-align: right
+
+    // <--- End Activity
+
++tablet
+  .Activities
+    &-list
+      .Activity
+        +flex(row, center, center)

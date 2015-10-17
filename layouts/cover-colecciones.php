@@ -8,7 +8,7 @@
   <article class="container">
 
     <header class="Cover-header u-whiteContent">
-      <h1 class="Title"> <?= the_title(); ?> </h1>
+      <h1 class="Title"> Colecciones </h1>
     </header>
 
   </article>
