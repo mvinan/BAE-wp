@@ -15,7 +15,6 @@
 .volumen
   margin: 50px 0
   &:hover &-box
-    // background: $gradient-yellow
     background: $color_yellow
     box-shadow: 0px 3px 8px rgba($color_black, 0.2)
     transform: translate(0,1%)
@@ -46,6 +45,7 @@
     .boxContent
       margin-left: 2em
       margin-top: 2em
+      display: none
 
   &-menu
     +flex(row, center, center)
@@ -161,3 +161,9 @@
     transform: translate(40%, 0)
   to
     trasnform: translate(-10%,0)
+
++tablet
+  .volumen
+    &-box
+      .boxContent
+        display: block

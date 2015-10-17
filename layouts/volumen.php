@@ -1,6 +1,6 @@
 <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 
-  <article class="volumen col-md-10">
+  <article class="volumen col-md-10 col-xs-12">
       <a href="#" class="fa fa-plus btn-down"></a>
 
       <div class="volumen-box">
@@ -9,7 +9,7 @@
             $url = $thumb['0'];
           ?>
 
-        <div class="boxImage col-md-7">
+        <div class="boxImage col-sm-7 col-xs-11">
           <div class="img" style="background-image:url('<?= $url ?>');">
           </div>
         </div>

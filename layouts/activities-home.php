@@ -14,7 +14,7 @@
         </footer>
       </div>
 
-      <div class="Activity-content col-md-10 col-lg-10">
+      <div class="Activity-content col-xs-12 col-md-10 col-lg-10">
         <header class="TitleActivity">
           <h3> Foro:  <?php the_title(); ?> </h3>
           <small> <?php the_category(); ?> </small>
