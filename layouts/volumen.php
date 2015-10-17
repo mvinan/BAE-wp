@@ -96,7 +96,7 @@
                     <a href="<?= get_permalink( $author->ID ) ?>" class="activity">
                       <h3> <?= get_the_title( $author->ID) ?> </h3>
                       <div class="meta">
-                        <p><strong><?= get_post_meta($author->ID, 'Nacimiento-Fallecimiento' , true); ?></strong></p>
+                        <p><strong><?= the_field('nacimiento_fallecimiento', $author->ID); ?></strong></p>
                         <span href="<?= get_permalink( $author->ID ) ?>" class="btn-go"><i class="fa fa-arrow-circle-right"></i></span>
                       </div>
                     </a>
