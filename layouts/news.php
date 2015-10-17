@@ -1,11 +1,18 @@
 <?php rewind_posts(); ?>
-<?php query_posts(array ('posts_per_page' => 2, 'post_type'=> 'noticias' )) ?>
+<?php if ('noticias' == get_post_type() ) {
+  query_posts(array ('posts_per_page' => 4, 'post_type'=> 'noticias' ));
+
+}else{
+  query_posts(array ('posts_per_page' => 2, 'post_type'=> 'noticias' ));
+
+} ?>
+
 <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 
   <div class="New u-blackWrapper col-md-6">
 
     <header>
-      <h4> <?php the_title(); ?> </h4>
+      <h4><?php the_title(); ?> </h4>
       <small class="Date"> <?php the_time('j F, Y') ?> </small>
       <?php the_excerpt(); ?>
     </header>

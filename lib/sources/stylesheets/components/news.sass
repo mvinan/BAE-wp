@@ -4,7 +4,7 @@
   .New
     width: 100%
     height: 500px
-    margin-bottom: 100px
+    margin-bottom: 150px
     border-radius: 0 0 3px 3px
     border-top: 3px solid $color_yellow
     &:nth-child(odd)
@@ -33,5 +33,6 @@
 +tablet
   .News-list
     +flex(row, center, start)
+    flex-wrap: wrap
     .New
       width: 47%

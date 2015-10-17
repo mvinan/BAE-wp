@@ -14,7 +14,7 @@
         <p class="Description-content--description">
           <?= bloginfo('description') ?>
         </p>
-        <a href="#" class="btn btn-primary">Conoce Más</a>
+        <a href=" <?= get_page_link(2) ?> " class="btn btn-primary">Conoce Más</a>
       </section>
     </article>
 
@@ -29,7 +29,18 @@
 <section class="Activities">
   <article class="container">
     <h2 class="Subtitle text-center">Actividades</h2>
-    <?php include(locate_template('layouts/activities-home.php')); ?>
+    <div class="Activities-list">
+      <?php rewind_posts(); ?>
+      <?php query_posts(array ('posts_per_page' => 2, 'post_type'=> 'actividades' )) ?>
+      <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+
+        <?php include(locate_template('layouts/activities-home.php')); ?>
+
+      <?php endwhile; else : ?>
+        <p><?php _e( 'Lo sentimos, algo esta roto, intenta agregar un post por favor.' ); ?></p>
+      <?php endif; ?>
+      <?php wp_reset_query(); ?>
+    </div>
     <footer class="text-center" style="margin-top:40px;margin-bottom: 80px;">
       <a href=" <?= get_category_link(4) ?> " class="btn btn-primary"> Ver todas las actividades</a>
     </footer>
