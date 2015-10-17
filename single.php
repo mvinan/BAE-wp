@@ -10,6 +10,8 @@
 				<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 
 					<?php the_content(); ?>
+					<?php the_author(); ?>
+					<?php the_author_image(  ); ?>
 
 				<?php endwhile; else : ?>
 					<p><?php _e( 'Lo siento no existe algun contenido en esta single Page.' ); ?></p>

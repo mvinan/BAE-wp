@@ -4,9 +4,9 @@
 
 <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 
-<section class="u-blackWrapper">
+<section>
   <div class="container">
-    <div class="Description text-center u-whiteContent">
+    <div class="Description text-center">
       <?php the_content(); ?>
     </div>
 

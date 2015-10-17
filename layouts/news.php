@@ -4,7 +4,7 @@
 
   <div class="New u-blackWrapper col-md-6">
 
-    <header class="u-whiteContent">
+    <header>
       <h4> <?php the_title(); ?> </h4>
       <small class="Date"> <?php the_time('j F, Y') ?> </small>
       <?php the_excerpt(); ?>
@@ -16,7 +16,7 @@
     ?>
 
 
-    <div class="image-news u-whiteContent" style="background-image:url('<?= $url ?>');">
+    <div class="image-news" style="background-image:url('<?= $url ?>');">
     </div>
     <footer class="news-button">
       <a href=" <?php the_permalink() ?> " class="btn btn-primary">Leer más</a>

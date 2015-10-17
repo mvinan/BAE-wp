@@ -1,10 +1,10 @@
 <?php get_header(); ?>
+
 <?php include(locate_template('layouts/cover-home.php')); ?>
 
 <!-- Description -->
-<section class="Description u-whiteContent u-blackWrapper">
+<section class="Description u-blackWrapper">
   <div class="container">
-
     <article class="Description-content col-md-6 col-sm-6">
       <header>
         <h2 class="Subtitle">¿Que és la biblioteca básica de autores ecuatorianos?</h2>
@@ -37,7 +37,7 @@
 </section>
 
 <!-- Colections -->
-<section class="Colections u-blackWrapper u-whiteContent">
+<section class="Colections u-blackWrapper">
   <article class="container">
     <h2 class="Subtitle text-center" style="margin:80px 0;">Colección</h2>
     <?php include(locate_template('layouts/colection.php')); ?>

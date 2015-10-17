@@ -5,7 +5,7 @@
   position: relative
   &:hover .Colection-box
     background-color: $color_yellow
-    box-shadow: 0px 3px 8px rgba($color_black, 0.5)
+    box-shadow: 0px 3px 8px rgba($color_black, 0.2)
     transform: translate(0,1%)
   &:hover .image::after
     content: ""
@@ -27,6 +27,8 @@
     left: 0
     border-radius: 3px
     transition: 0.3s ease
+    box-shadow: 0px 3px 8px rgba($color_black, 0.2)
+
 
   &-content
     +flex(row, start, center)

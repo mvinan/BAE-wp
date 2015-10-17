@@ -16,9 +16,9 @@
 </section>
 
 <!-- Colections -->
-<section class="Colections u-blackWrapper u-whiteContent">
+<section class="Colections u-blackWrapper">
   <article class="container">
-    <h2 class="Subtitle text-center" style="margin:80px 0;">Colección</h2>
+    <h2 class="Subtitle text-center" style="margin:80px 0;"></h2>
     <?php include(locate_template('layouts/colection.php')); ?>
   </article>
 </section>
