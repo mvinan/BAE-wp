@@ -53,13 +53,13 @@
               if( $all_activities ) {
 
                   foreach ( $all_activities as $activity ) { ?>
-                    <div class="activity">
+                    <a href="<?= get_permalink( $activity->ID ) ?>" class="activity">
                       <h3> <?= get_the_title( $activity->ID) ?> </h3>
                       <div class="meta">
                         <p><strong><?= get_the_time('j F, Y', $activity->ID ); ?></strong></p>
-                        <a href="<?= get_permalink( $activity->ID ) ?>" class="btn-go"><i class="fa fa-chevron-right"></i></a>
+                        <span href="<?= get_permalink( $activity->ID ) ?>" class="btn-go"><i class="fa fa-arrow-circle-right"></i></span>
                       </div>
-                    </div>
+                    </a>
 
 
                     <?php
@@ -93,13 +93,13 @@
               if( $all_authors ) {
 
                   foreach ( $all_authors as $author ) { ?>
-                    <div class="activity">
+                    <a href="<?= get_permalink( $author->ID ) ?>" class="activity">
                       <h3> <?= get_the_title( $author->ID) ?> </h3>
                       <div class="meta">
-                        <p><strong><?= get_the_time('j F, Y', $author->ID ); ?></strong></p>
-                        <a href="<?= get_permalink( $author->ID ) ?>" class="btn-go"><i class="fa fa-chevron-right"></i></a>
+                        <p><strong><?= get_post_meta($author->ID, 'Nacimiento-Fallecimiento' , true); ?></strong></p>
+                        <span href="<?= get_permalink( $author->ID ) ?>" class="btn-go"><i class="fa fa-arrow-circle-right"></i></span>
                       </div>
-                    </div>
+                    </a>
 
 
                     <?php
