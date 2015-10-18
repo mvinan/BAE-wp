@@ -10,7 +10,7 @@
   </head>
   <body>
 
-    <?php if (!is_page('actividad') ): ?>
+    <?php if (!is_page( array('actividad', 'noticia') )): ?>
       <!-- Brand -->
       <figure class="brand">
         <img class="brand-image" src="<?= get_template_directory_uri().'/assets/images/brand.png'?> " alt=" Universidad Técnica Particular de Loja" />

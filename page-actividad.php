@@ -1,8 +1,15 @@
 <?php get_header(); ?>
 <!-- Activities -->
 <section class="Activities">
+    <section class="CoverNews" style="margin-bottom: 80px;">
+      <article class="container">
+        <header class="Cover-header u-whiteContent">
+          <h1 class="Title"> Actividades</h1>
+        </header>
+      </article>
+    </section>
+
   <article class="container">
-    <h2 class="Subtitle text-center">Actividades</h2>
     <div class="Activities-list">
       <?php rewind_posts(); ?>
       <?php query_posts(array ('paged' => $paged,'posts_per_page' => 4, 'post_type'=> 'actividades' )) ?>

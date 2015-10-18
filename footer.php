@@ -11,7 +11,7 @@
 
       <div class="Contact-wrapper" style="background-image:url( <?= $url ?> );">
           <article class="container">
-            <h4> Contáctanos: </h4>
+            <h4> Contáctanos </h4>
 
             <?php the_content(); ?>
           </article>
