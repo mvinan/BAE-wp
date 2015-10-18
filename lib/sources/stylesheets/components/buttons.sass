@@ -51,3 +51,24 @@
   background: white
   i
     color: $color_black
+
+//Nav-buttons
+.nav-buttons
+  +flex(row, center, center)
+  margin-bottom: 80px
+  & > :last-child
+    border-radius: 0 3px 3px 0
+  & > :first-child
+    border-radius: 3px 0 0 3px
+  span, a
+    padding: 5px 10px
+    border: 1px solid rgba($color_lightgray, 0.3)
+    color: $color_black
+    &:hover
+      background: $color_cleangray
+  a
+    &:hover
+      color: $color_red !important
+  .current
+    background: $color_cleangray
+    color: $color_red

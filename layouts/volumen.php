@@ -60,15 +60,12 @@
                         <span href="<?= get_permalink( $activity->ID ) ?>" class="btn-go"><i class="fa fa-arrow-circle-right"></i></span>
                       </div>
                     </a>
-
-
                     <?php
                   }
               }
                 ?>
             </div>
           </article>
-
         </div>
         <div class="item item-authors">
           <a href="#" class="item-link action-authors"> <i class="fa fa-users fa-fw"></i>Autores </a>
@@ -91,7 +88,6 @@
                'suppress_filters' => false
               ) );
               if( $all_authors ) {
-
                   foreach ( $all_authors as $author ) { ?>
                     <a href="<?= get_permalink( $author->ID ) ?>" class="activity">
                       <h3> <?= get_the_title( $author->ID) ?> </h3>
@@ -100,8 +96,6 @@
                         <span href="<?= get_permalink( $author->ID ) ?>" class="btn-go"><i class="fa fa-arrow-circle-right"></i></span>
                       </div>
                     </a>
-
-
                     <?php
                   }
               }
@@ -109,10 +103,13 @@
             </div>
           </article>
         </div>
-
     </div>
   </article>
-<?php endwhile; else : ?>
+<?php endwhile; ?>
+<footer class="nav-buttons col-sm-12">
+  <?= paginate_links() ?>
+</footer>
+<?php else : ?>
 <p>
   <?php _e( 'Lo sentimos, algo esta roto, intenta agregar un post por favor.' ); ?>
 </p>

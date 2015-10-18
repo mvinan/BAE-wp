@@ -12,7 +12,7 @@
   <div class="Activity-content col-xs-12 col-md-10 col-lg-10">
     <header class="TitleActivity">
       <h3> Foro:  <?php the_title(); ?> </h3>
-      <small> <?php the_category(); ?> </small>
+      <small> <span class="category-name"><?php foreach((get_the_category()) as $category) { echo $category->cat_name . ''; } ?></span></small>
     </header>
     <section class="DescriptionActivity">
       <?php the_excerpt(); ?>

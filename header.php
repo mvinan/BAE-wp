@@ -10,10 +10,12 @@
   </head>
   <body>
 
-    <!-- Brand -->
-    <figure class="brand">
-      <img class="brand-image" src="<?= get_template_directory_uri().'/assets/images/brand.png'?> " alt=" Universidad Técnica Particular de Loja" />
-    </figure>
+    <?php if (!is_page('actividad') ): ?>
+      <!-- Brand -->
+      <figure class="brand">
+        <img class="brand-image" src="<?= get_template_directory_uri().'/assets/images/brand.png'?> " alt=" Universidad Técnica Particular de Loja" />
+      </figure>
+    <?php endif; ?>
 
     <!-- Main -->
     <div class="menu">

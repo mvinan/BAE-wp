@@ -1,15 +1,5 @@
-<?php get_header(); ?>
-<?php
-the_title();
-?>
-<?php if (have_posts()) : ?>
-  <?php while (have_posts()) : the_post(); ?>
+<?php get_header() ?>
 
-  <p>
-    <?php the_content(); ?>
-  </p>
+<?php include(locate_template('layouts/cover-noticias.php')); ?>
 
-
-  <?php endwhile; ?>
-<?php endif; ?>
-<?php get_footer(); ?>
+<?php get_footer() ?>
