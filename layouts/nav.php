@@ -1,5 +1,4 @@
 <main>
-  <!-- <a href="#" class="icon-times fa fa-times fa-fw"></a> -->
   <?php wp_nav_menu(
     array(
       'theme_location' => 'nav-header',

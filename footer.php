@@ -33,10 +33,10 @@
         </div>
         <div class="SocialChannels">
           <ul class="SocialChannels-list">
-            <li><a href="#" class="fa fa-google-plus"></a></li>
-            <li><a href="#" class="fa fa-facebook"></a></li>
-            <li><a href="#" class="fa fa-instagram"></a></li>
-            <li><a href="#" class="fa fa-twitter"></a></li>
+            <li><a href="//plus.google.com/+UTPLoficial" class="fa fa-google-plus"></a></li>
+            <li><a href="//www.facebook.com/utpl.loja" class="fa fa-facebook"></a></li>
+            <li><a href="//www.youtube.com/user/utpl" class="fa fa-youtube"></a></li>
+            <li><a href="//twitter.com/utpl" class="fa fa-twitter"></a></li>
           </ul>
         </div>
 
