@@ -8,10 +8,10 @@
   <article class="u-coverBlack">
 
     <header class="CoverLiterature-header u-whiteContent">
-      <h1 class="Title animated fadeInLeft"> <?= the_title(); ?> </h1>
-      <small class="animated flipInX">Resúmen</small>
+      <h1 class="Title"> <?= the_title(); ?> </h1>
+      <small>Resúmen</small>
     </header>
-    <div class="CoverLiterature-image animated fadeInDown" style="background-image:url('<?= $url ?>')";>
+    <div class="CoverLiterature-image" style="background-image:url('<?= $url ?>')";>
     </div>
 
   </article>

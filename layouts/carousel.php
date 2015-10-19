@@ -21,7 +21,7 @@
 			</div>
 
 			<?php endwhile; else : ?>
-				<p><?php _e( 'Lo sentimos, algo esta roto, intenta agregar un post por favor.' ); ?></p>
+				<p><?php _e( 'Lo sentimos, no hay portadas disponibles por el momento.' ); ?></p>
 			<?php endif; ?>
 
   </div>

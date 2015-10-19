@@ -6,7 +6,7 @@
 
   <article class="container">
     <header class="Cover-header u-whiteContent">
-      <h1 class="Title"> <?= bloginfo('name') ?> </h1>
+      <h1 class="Title animated animated flipInX"> <?= bloginfo('name') ?> </h1>
     </header>
     <footer>
       <a href="<?= get_page_link(9) ?>" class="btn btn-primary">

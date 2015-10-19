@@ -42,7 +42,7 @@
       <?php wp_reset_query(); ?>
     </div>
     <footer class="text-center" style="margin-top:40px;margin-bottom: 80px;">
-      <a href=" <?= get_category_link(4) ?> " class="btn btn-primary"> Ver todas las actividades</a>
+      <a href="<?= get_page_link(158); ?>" class="btn btn-primary"> Ver todas las actividades</a>
     </footer>
   </article>
 </section>
@@ -61,7 +61,18 @@
     <h2 class="Subtitle text-center" style="margin:80px 0">Noticias</h2>
 
     <div class="News-list">
-      <?php include(locate_template('layouts/news.php')); ?>
+      <?php rewind_posts(); ?>
+      <?php query_posts(array ('paged' => $paged,'posts_per_page' => 2, 'post_type'=> 'noticias' )); ?>
+      <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+
+        <?php include(locate_template('layouts/news.php')); ?>
+
+      <?php endwhile; ?>
+      <?php else : ?>
+        <p><?php _e( 'No tenemos noticias por el momento.' ); ?></p>
+      <?php endif; ?>
+      <?php wp_reset_query(); ?>
+
     </div>
   </article>
 </section>

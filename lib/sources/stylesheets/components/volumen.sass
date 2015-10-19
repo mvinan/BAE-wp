@@ -46,6 +46,8 @@
       margin-left: 2em
       margin-top: 2em
       display: none
+      &-description
+        font-size: 14px
 
   &-menu
     +flex(row, center, center)
@@ -90,10 +92,12 @@
     right: 50px
     z-index: 11
     transition: 0.3s ease
-    &:hover
+    &:hover, &:focus
       box-shadow: 0px 2px 4px rgba($color_darkgray, 0.5)
       background-image: linear-gradient(-180deg, #FF5F3B 10%, #FF2A68 90%)
       color: white !important
+      outline: none
+      text-decoration: none
     &:active
       transform: translate(0, 15%)
 
@@ -109,7 +113,6 @@
     width: 100%
     background: white
     visibility: visible
-    opacity: 0.95
     border-radius: 3px
     box-shadow: 0px 4px 15px rgba($color_black, 0.4)
     padding: 4em
@@ -125,12 +128,11 @@
         border-bottom: 1px solid rgba($color_lightgray, 0.3)
         width: 100%
         +flex(column, start, start)
-        transition: 0.3s ease
         h3
           margin: 0
           font-size: 19px
-          color: $color_black
           transition: 0.3s ease
+          color: $color_blue
 
         .meta
           +flex(row, space-between, center)
@@ -138,7 +140,6 @@
           p
             color: $color_black
             strong
-              text-transform: capitalize
               color: $color_lightgray
               font-size: 12px
           span
@@ -151,8 +152,8 @@
         &:hover h3
           transform: translate(5%,0%)
           color: $color_red
-        &:hover .meta span
-          animation: 0.7s arrow-right infinite
+        &:hover .meta i
+          animation: 0.7s arrow-right
 
 @keyframes arrow-right
   from

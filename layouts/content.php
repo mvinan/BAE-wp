@@ -16,11 +16,18 @@
 				<!-- Content Post -->
 				<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 
+					<?php if ('autores_ecuatorianos' == get_post_type() ): ?>
+						<h2><strong><?php the_field('nacimiento_fallecimiento'); ?></strong></h2>
+					<?php endif ?>
+
 					<?php the_content(); ?>
 
 				<?php endwhile; else : ?>
 					<p><?php _e( 'Lo siento no existe algun contenido en esta single Page.' ); ?></p>
 				<?php endif; ?>
+			</div>
+			<div class="comments col-sm-12">
+				<?php comments_template(); ?>
 			</div>
 		</div>
 	</article>
