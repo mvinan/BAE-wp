@@ -23,7 +23,7 @@ query_posts($args);
           </header>
           <article class="u-whiteContent">
             <p>
-              <?= substr(get_the_excerpt(), 0,250); ?>
+              <?= the_excerpt() ?>
             </p>
           </article>
         </div>

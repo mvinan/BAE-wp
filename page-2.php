@@ -20,7 +20,7 @@
         <article class="Description-content">
           <div class="container">
             <div class="content u-whiteContent">
-              <h2 class="Subtitle text-center"> Nuestros objetivos </h2>
+              <h2 class="Subtitle text-center"> Nuestro objetivo </h2>
               <div class="ObjetiveBox">
                 <i class="fa fa-university col-md-4"></i>
                 <p clasS="col-md-8"><?php the_field('objetivo') ?></p>

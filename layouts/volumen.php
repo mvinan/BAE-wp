@@ -113,7 +113,7 @@
 </footer>
 <?php else : ?>
 <p>
-  <?php _e( 'Lo sentimos, algo esta roto, intenta agregar un post por favor.' ); ?>
+  <?php _e( 'Lo sentimos, no hay volúmenes por el momento, regresa pronto.' ); ?>
 </p>
 <?php endif; ?>
 <?php wp_reset_query(); ?>

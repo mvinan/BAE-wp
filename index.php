@@ -69,7 +69,7 @@
 
       <?php endwhile; ?>
       <?php else : ?>
-        <p><?php _e( 'Lo sentimos, algo esta roto, intenta agregar un post por favor.' ); ?></p>
+        <p><?php _e( 'No tenemos noticias por el momento.' ); ?></p>
       <?php endif; ?>
       <?php wp_reset_query(); ?>
 
