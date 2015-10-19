@@ -110,20 +110,3 @@ function mi_logo_personalizado_url_titulo() {
     return 'Bbae: Biblioteca básica de autores ecuatorianos';
 }
 add_filter( 'login_headertitle', 'mi_logo_personalizado_url_titulo' );
-
-add_action( 'wp_print_scripts', 'deregister_cf7_javascript', 100 );
-
-// Contact Form7 llamada unicamente para la pagina contact
-//eliminar Java Script de contact form 7
-function deregister_cf7_javascript() {
-    if ( !is_page('contact') ) {
-        wp_deregister_script( 'contact-form-7' );
-    }
-}
-//eliminar CSS de contact form 7
-add_action( 'wp_print_styles', 'deregister_cf7_styles', 100 );
-function deregister_cf7_styles() {
-    if ( !is_page('contact') ) {
-        wp_deregister_style( 'contact-form-7' );
-    }
-}
