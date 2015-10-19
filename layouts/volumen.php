@@ -44,13 +44,13 @@
                'numberposts' => -1,
                'post_type' => 'actividades',
                'tax_query' => array(
-                 'taxonomy' => 'literatura',
+                 'taxonomy' => 'literaturas',
                  'field' => 'id'
                ),
                'post__in' => $activities,
                'suppress_filters' => false
               ) );
-              if( $all_activities ) {
+              if( $all_activities && $all_activities != 0) {
 
                   foreach ( $all_activities as $activity ) { ?>
                     <a href="<?= get_permalink( $activity->ID ) ?>" class="activity">
@@ -62,6 +62,8 @@
                     </a>
                     <?php
                   }
+              }else{
+                ?> <h3>No hay actividaddes aún, regresa pronto ;)</h3>  <?php
               }
                 ?>
             </div>

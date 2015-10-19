@@ -28,8 +28,7 @@
   function register_my_menus(){
     register_nav_menus(
       array(
-        'nav-header'=>__('Menu del Encabezado'),
-        'nav-social'=>__('Iconos sociales del footer')
+        'nav-header'=>__('Menu del Encabezado')
       )
     );
   }
