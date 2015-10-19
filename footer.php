@@ -45,8 +45,8 @@
       <div class="Copyright-author">
         <div class="container">
           <div class="wrapper">
-            <p>2015 ©Copyright,Biblioteca básica de autores ecuatorianos </p>
-            <p> powered by <a href="http://miguelvinan.com">@miguelviñan</a></p>
+            <p>2015 ©Copyright, Biblioteca básica de autores ecuatorianos </p>
+            <p>sitio desarrollado por <a href="http://miguelvinan.com" >@miguelviñan</a></p>
           </div>
         </div>
       </div>

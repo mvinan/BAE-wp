@@ -16,7 +16,7 @@
         </div>
       </article>
 
-      <section class="Description u-sectionBlack">
+      <section class="Description u-sectionBlack" style="padding-bottom:0;">
         <article class="Description-content">
           <div class="container">
             <div class="content u-whiteContent">
@@ -31,8 +31,34 @@
       </section>
 
       <section class="Team">
-        <article class="">
+        <h2 class="Subtitle text-center">El equipo que lo hizo posible</h2>
+        <article class="Team-list">
 
+          <?php
+
+          if( have_rows('integrante_del_equipo') ):
+              while ( have_rows('integrante_del_equipo') ) : the_row(); ?>
+
+                <div class="Member col-md-4 u-whiteContent">
+
+                  <figure class="Member-image">
+                    <img src="<?php the_sub_field('imagen_del_integrante') ?> " alt=" <?php the_sub_field('nombre_del_integrante') ?>"/>
+                  </figure>
+                  <h4 class="text-center">
+                    <?php the_sub_field('nombre_del_integrante') ?>
+                  </h4>
+                  <p class="text-center appointment"><strong><?php the_sub_field('cargo_del_integrante') ?></strong></p>
+                  <p class="email"> <?php the_sub_field('email_del_integrante') ?> </p>
+
+                </div>
+
+
+              <?php endwhile;
+          else :
+
+            ?> <h3>No existen integrantes.</h3><?php
+          endif;
+          ?>
         </article>
       </section>
 
