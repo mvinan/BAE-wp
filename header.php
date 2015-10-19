@@ -10,12 +10,13 @@
   </head>
   <body>
 
-    <?php if (!is_page( array('actividad', 'noticia') )): ?>
+    <?php if (!is_page( array('actividad', 'noticia') ) && !is_search() ): ?>
       <!-- Brand -->
       <figure class="brand">
         <img class="brand-image" src="<?= get_template_directory_uri().'/assets/images/brand.png'?> " alt=" Universidad Técnica Particular de Loja" />
       </figure>
     <?php endif; ?>
+      <?php include(locate_template('searchform.php')); ?>
 
     <!-- Main -->
     <div class="menu">

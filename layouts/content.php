@@ -26,6 +26,9 @@
 					<p><?php _e( 'Lo siento no existe algun contenido en esta single Page.' ); ?></p>
 				<?php endif; ?>
 			</div>
+			<div class="comments col-sm-12">
+				<?php comments_template(); ?>
+			</div>
 		</div>
 	</article>
 </section>
