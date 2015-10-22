@@ -33,17 +33,59 @@
       <section class="Team">
         <h2 class="Subtitle text-center">El equipo que lo hizo posible</h2>
         <article class="Team-list">
-
+          <h3 class="text-center" style="margin-bottom:30px;">DIRECTIVOS - PROMOTORES DEL PROYECTO</h3>
           <?php
-
-          if( have_rows('integrante_del_equipo') ):
-              while ( have_rows('integrante_del_equipo') ) : the_row(); ?>
-
+          if( have_rows('directivos') ):
+              while ( have_rows('directivos') ) : the_row(); ?>
                 <div class="Member col-md-4 u-whiteContent">
+                  <h4 class="text-center">
+                    <?php the_sub_field('nombre_del_integrante') ?>
+                  </h4>
+                  <p class="text-center appointment"><strong><?php the_sub_field('cargo_del_integrante') ?></strong></p>
+                  <p class="email"> <?php the_sub_field('email_del_integrante') ?> </p>
 
-                  <figure class="Member-image">
-                    <img src="<?php the_sub_field('imagen_del_integrante') ?> " alt=" <?php the_sub_field('nombre_del_integrante') ?>"/>
-                  </figure>
+                </div>
+
+
+              <?php endwhile;
+          else :
+
+            ?> <h3>No existen integrantes.</h3><?php
+          endif;
+          ?>
+        </article>
+      </section>
+      <section class="Gestores">
+        <article class="Team-list">
+          <h3 class="text-center" style="margin-bottom:30px;">EQUIPO GESTOR DEL PROYECTO</h3>
+          <?php
+          if( have_rows('equipo_gestor') ):
+              while ( have_rows('equipo_gestor') ) : the_row(); ?>
+                <div class="Member col-md-4 u-whiteContent">
+                  <h4 class="text-center">
+                    <?php the_sub_field('nombre_del_integrante') ?>
+                  </h4>
+                  <p class="text-center appointment"><strong><?php the_sub_field('cargo_del_integrante') ?></strong></p>
+                  <p class="email"> <?php the_sub_field('email_del_integrante') ?> </p>
+
+                </div>
+
+
+              <?php endwhile;
+          else :
+
+            ?> <h3>No existen integrantes.</h3><?php
+          endif;
+          ?>
+        </article>
+      </section>
+      <section class="Prologuistas">
+        <article class="Team-list">
+          <h3 class="text-center" style="margin-bottom:30px;">PROLOGUISTAS</h3>
+          <?php
+          if( have_rows('prologuistas') ):
+              while ( have_rows('prologuistas') ) : the_row(); ?>
+                <div class="Member col-md-4 u-whiteContent">
                   <h4 class="text-center">
                     <?php the_sub_field('nombre_del_integrante') ?>
                   </h4>

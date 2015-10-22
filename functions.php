@@ -18,6 +18,12 @@
     // JS
     wp_enqueue_script('jquery-v2','https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js',"", "", true);
     wp_enqueue_script( 'bootstrapJs', get_template_directory_uri() . '/assets/js/min/app.js', array('jquery-v2'),'', true );
+    wp_register_script('scrollorama', get_template_directory_uri().'/assets/js/jquery.superscrollorama.js', array('jquery-v2'),"",true);
+    wp_register_script('tweenmax', get_template_directory_uri().'/assets/js/TweenMax.min.js', array('jquery-v2'),"",true);
+    if ( is_page(2) ) {
+      wp_enqueue_script('scrollorama');
+      wp_enqueue_script('tweenmax');
+    }
   }
 
   add_action( 'wp_enqueue_scripts', 'bae_scripts' );

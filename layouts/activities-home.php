@@ -1,7 +1,7 @@
 <div class="Activity">
   <div class="Activity-author col-md-2 col-lg-2">
     <header class="AuthorPhoto">
-      <?php the_author_image(); ?>
+      <img class="img" src="<?= get_template_directory_uri().'/assets/images/profile.svg' ?>" alt="" />
     </header>
     <footer class="AuthorInfo">
       <small class="Date"> <?php the_time('j F, Y') ?> </small>
