@@ -1,0 +1,97 @@
+//typography
+@import url("//fonts.googleapis.com/css?family=Lato:400,900,300");
+@import url("//fonts.googleapis.com/css?family=Oswald:400,300");
+
+body
+  font-family: $font_family_regular
+  font-size: $font_size_regular
+
+.Title
+  font-size: $font_size_title
+  font-family: $font_family_primary
+  font-weight: $font_bold
+  text-transform: uppercase
+  margin-top: 0
+
++desktop
+  .Title
+    font-size: $font_size_title + 22px !important
+
++desktop-HD
+  .Title
+    font-size: $font_size_title + 32px !important
+
+.Subtitle
+  font-size: $font_size_subtitle
+  font-family: $font_family_primary
+  text-transform: uppercase
+  line-height: 1.4
+
++desktop
+  .Subtitle
+    font-size: $font_size_subtitle + 16px !important
+
+h3
+  font-size: $font_size_h3
+  font-family: $font_family_regular
+  font-weight: $font_bold
+
+h4
+  font-size: $font_size_h4
+  font-family: $font_family_primary
+  text-transform: uppercase
+
++desktop
+  h4
+    font-size: $font_size_h4 + 10px
+
+
+h5
+  font-size: $font_size_h5
+  font-family: $font_family_regular
+  font-weight: $font_bold
+
+h6
+  font-size: $font_size_h6
+  font-family: $font_family_regular
+  font-weight: $font_bold
+  text-transform: uppercase
+  color: $color_yellow
+
+small
+  font-size: $font_size_small
+  font-family: $font_family_regular
+
+p
+  font-size: $font_size_regular
+  font-family: $font_family_regular
+  font-weight: $font_regular
+  line-height: 25px
+  color: $color_darkgray
+
+a
+  font-size: $font_size_regular
+  font-family: $font_family_regular
+  transition: 0.2s
+
+  &:hover
+    color: $color_yellow !important
+    text-decoration: none
+
+.Date
+  color: $color_lightgray
+  font-size: 14px
+  font-weight: $font_bold
+
+.post-categories
+  list-style-type: none
+  padding-left: 0
+  li
+    a
+      color: $color_lightgray
+      padding: 5px 15px
+      border: 1px solid rgba($color_lightgray, 0.5)
+      border-radius: 3px
+      &:hover
+        color: darken($color_lightgray, 10%) !important
+        background: rgba($color_lightgray, 0.2)

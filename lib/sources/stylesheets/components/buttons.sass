@@ -1,0 +1,74 @@
+//Icons
+.btn-menu
+  padding: 10px 20px
+  color: white
+  background: rgba(black, 0.5)
+  border: none
+  &:hover, &:focus
+    background: rgba(black, 0.7)
+    color: white
+    outline: none
+  &:active
+    background: rgba(black, 0.3)
+    color: white
+
+.Nav-icons--searchIcon
+  color: white
+
+.btn-primary, .btn-secondary
+  padding: 15px 40px
+  background: $color_yellow
+  text-transform: uppercase
+  font-weight: $font_bold
+  border: none
+  border-radius: 3px
+  transition: 0.3s
+  &:hover, &:focus, &:active
+    background: darken($color_yellow, 10%)
+    color: darken(white, 5%) !important
+
+.btn-secondary
+  background: $color_darkgray
+  color: white
+  box-shadow: 0 2px 4px rgba(black, 0.5)
+  &:hover, &:focus, &:active
+    background: darken($color_darkgray, 7%)
+
+.btn-default
+  border-radius: 3px
+  border: 1px solid rgba(white, 0.5)
+  &:active
+    color: white !important
+
+//
+.icon
+  margin-right: 0.5em
+
+.icons-list
+  font-size: 12px !important
+
+.btn-go
+  background: white
+  i
+    color: $color_black
+
+//Nav-buttons
+.nav-buttons
+  +flex(row, center, center)
+  margin-bottom: 80px
+  & > :last-child
+    border-radius: 0 3px 3px 0
+  & > :first-child
+    border-radius: 3px 0 0 3px
+  span, a
+    padding: 5px 10px
+    border: 1px solid rgba($color_lightgray, 0.3)
+    color: $color_black
+    &:hover
+      background: $color_cleangray
+  a
+    &:hover
+      color: $color_red !important
+  .current
+    background: $color_cleangray
+    color: $color_red

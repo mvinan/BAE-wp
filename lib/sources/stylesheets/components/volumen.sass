@@ -1,0 +1,202 @@
+.volumenes
+  padding: 80px 0
+  .container
+    +flex(row, center, center)
+    flex-wrap: wrap
+
+.volumen-active
+  .volumen-menu
+    visibility: visible
+    opacity: 1
+    bottom: 0px
+    .item
+      bottom: 0
+
+.volumen
+  margin: 50px 0
+  &:hover &-box
+    background: $color_yellow
+    box-shadow: 0px 3px 8px rgba($color_black, 0.2)
+    transform: translate(0,1%)
+    transition: 0.3s ease
+
+  &-box
+    +flex(row, start, start)
+    background: white
+    position: relative
+    height: 375px
+    border-radius: 3px
+    transition: 0.3s ease
+    z-index: 10
+    box-shadow: 0 2px 8px rgba($color_black, 0.2)
+    .boxImage
+      height: 100%
+      .img
+        width: 100%
+        height: 100%
+        position: absolute
+        background-position: center center
+        background-size: cover
+        background-repeat: no-repeat
+        border-radius: 3px
+        top: -1em
+        left: 1em
+
+    .boxContent
+      margin-left: 2em
+      margin-top: 2em
+      display: none
+      &-description
+        font-size: 14px
+
+  &-menu
+    +flex(row, center, center)
+    transition: 0.2s ease
+    bottom: 70px
+    position: relative
+    height: 70px
+    background: $color_darkgray
+    visibility: hidden
+    opacity: 0
+    border-radius: 3px
+    .item
+      margin-right: 2em
+      bottom: 50px
+      position: relative
+      a
+        color: white
+        &:hover
+          color: $color_red !important
+      a.fa-times
+        color: $color_darkgray
+        padding: 1em
+      i
+        margin-right: 0.5em
+        font-size: 20px
+      &:last-child
+        margin-right: 0
+      &:nth-child(1)
+        transition: 0.5s ease
+      &:nth-child(2)
+        transition: 0.65s ease
+      &:nth-child(3)
+        transition: 0.8s ease
+
+
+  .btn-down
+    color: white
+    background-image: linear-gradient(-180deg, #FF5F3B 0%, #FF2A68 100%)
+    padding: 18px 20px
+    border-radius: 50%
+    position: absolute
+    bottom: 50px
+    right: 50px
+    z-index: 11
+    transition: 0.3s ease
+    &:hover, &:focus
+      box-shadow: 0px 2px 4px rgba($color_darkgray, 0.5)
+      background-image: linear-gradient(-180deg, #FF5F3B 10%, #FF2A68 90%)
+      color: white !important
+      outline: none
+      text-decoration: none
+    &:active
+      transform: translate(0, 15%)
+
+.volumen
+  .volumenActivities,
+  .volumenAuthors
+    position: fixed
+    z-index: 900
+    display: none
+    top: 0
+    left: 0
+    height: 100%
+    width: 100%
+    background: white
+    visibility: visible
+    border-radius: 3px
+    box-shadow: 0px 4px 15px rgba($color_black, 0.4)
+    padding: 0
+    overflow: scroll
+    &-listContainer
+      +flex(column, start, start)
+      h3
+        margin-bottom: 3em
+        color: $color_red
+
+      .activity
+        padding: 10px
+        border-bottom: 1px solid rgba($color_lightgray, 0.3)
+        width: 100%
+        +flex(column, start, start)
+        h3
+          margin: 0
+          font-size: 14px
+          transition: 0.3s ease
+          color: $color_blue
+
+        .meta
+          +flex(row, space-between, center)
+          width: 100%
+          p
+            color: $color_black
+            strong
+              color: $color_lightgray
+              font-size: 12px
+          span
+            font-weight: $font_bold
+            i
+              margin: 0
+              color: $color_yellow
+              font-size: 30px
+
+        &:hover h3
+          transform: translate(5%,0%)
+          color: $color_red
+        &:hover .meta i
+          animation: 0.7s arrow-right
+
+@keyframes arrow-right
+  from
+    transform: translate(0%, 0)
+  20%
+    transform: translate(40%, 0)
+  to
+    trasnform: translate(-10%,0)
+
++tablet
+  .volumen
+    &-box
+      .boxContent
+        display: block
+
+    .volumenActivities,
+    .volumenAuthors
+      padding: 4em
+
+      &-listContainer
+        .activity
+          padding: 10px
+          border-bottom: 1px solid rgba($color_lightgray, 0.3)
+          width: 100%
+          +flex(column, start, start)
+          h3
+            margin: 0
+            font-size: 19px
+            transition: 0.3s ease
+            color: $color_blue
+
+          .meta
+            +flex(row, space-between, center)
+            width: 100%
+            p
+              color: $color_black
+              strong
+                color: $color_lightgray
+                font-size: 12px
+            span
+              font-weight: $font_bold
+              i
+                margin: 0
+                color: $color_yellow
+                font-size: 30px

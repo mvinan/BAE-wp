@@ -1,0 +1,58 @@
+.Description
+  padding: 5em 0
+
+  &-content,
+  &-carousel
+  padding-right: 0
+  padding-left: 0
+
+  &-content
+    +flex(column, center, start)
+
+    .Subtitle
+      margin-top: 0
+      margin-bottom: 30px
+    &--description
+      margin-bottom: 30px
+  &-carousel
+    margin-top: 5em
+
++tablet
+  .Description
+    .container
+      +flex(row, center, center)
+
+      .Description-content,
+      .Description-carousel
+      padding-right: 15px
+      padding-left: 15px
+
+      .Description-content
+        +flex(column, center, start)
+        padding-right: 0
+        padding-left: 0
+
+      .Description-carousel
+        margin-top: 0
+
++desktop
+  .Description
+    &-content
+      padding-right: 10px !important
+
+
+.ObjetiveBox
+  background: $color_yellow
+  padding: 3em
+  border-radius: 3px
+  +flex(row, center, center )
+  flex-wrap: wrap
+  transform: translateY(10%)
+  i
+    +flex(row, center, center)
+    font-size: 80px
+    color: white
+
++desktop
+  .ObjetiveBox
+    transform: translateY(50%)
