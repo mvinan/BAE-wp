@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-  <?php include(locate_template('layouts/cover.php')); ?>
+  <?php include(locate_template('layouts/cover-single.php')); ?>
 
   <?php if (have_posts()) : ?>
     <?php while (have_posts()) : the_post(); ?>
@@ -9,8 +9,10 @@
         <div class="Description-content">
           <div class="container">
             <div class="content">
-              <h2 class="Subtitle text-center">La historia que lo inició</h2>
-              <?php the_content(); ?>
+              <h2 class="Subtitle text-center"><?php echo the_field('header_project_description') ?></h2>
+              <div>
+                <?php echo the_field('project_description'); ?>
+              </div>
             </div>
           </div>
         </div>
@@ -20,10 +22,23 @@
         <article class="Description-content">
           <div class="container">
             <div class="content u-whiteContent">
-              <h2 class="Subtitle text-center"> Nuestro objetivo </h2>
+              <h2 class="Subtitle text-center"> <?php the_field('header_objetive') ?> </h2>
               <div class="ObjetiveBox">
                 <i class="fa fa-university col-md-4"></i>
-                <p clasS="col-md-8"><?php the_field('objetivo') ?></p>
+                <div class="col-md-6">
+                  <?php
+                  if( have_rows('objetives') ):
+                      while ( have_rows('objetives') ) : the_row();
+                        ?>
+                          <?php the_sub_field('objetivo'); ?>
+                        <?php
+                      endwhile;
+                
+                  else :
+                    ?> <p>No exiten objetivos por el momento.</p> <?php
+                  endif;
+                ?>
+                </div>
               </div>
             </div>
           </div>
@@ -31,9 +46,9 @@
       </section>
 
       <section class="Team">
-        <h2 class="Subtitle text-center">El equipo que lo hizo posible</h2>
+        <h2 class="Subtitle text-center"><?php echo the_field('encabezado_del_equipo'); ?></h2>
         <article class="Team-list">
-          <h3 class="text-center" style="margin-bottom:30px;">DIRECTIVOS - PROMOTORES DEL PROYECTO</h3>
+          <h3 class="text-center" style="margin-bottom:30px;"><?php echo the_field('encabezado_team_director'); ?></h3>
           <?php
           if( have_rows('directivos') ):
               while ( have_rows('directivos') ) : the_row(); ?>
@@ -57,7 +72,7 @@
       </section>
       <section class="Gestores">
         <article class="Team-list">
-          <h3 class="text-center" style="margin-bottom:30px;">EQUIPO GESTOR DEL PROYECTO</h3>
+          <h3 class="text-center" style="margin-bottom:30px;"><?php echo the_field('header_manage_team'); ?></h3>
           <?php
           if( have_rows('equipo_gestor') ):
               while ( have_rows('equipo_gestor') ) : the_row(); ?>
@@ -81,7 +96,7 @@
       </section>
       <section class="Prologuistas">
         <article class="Team-list">
-          <h3 class="text-center" style="margin-bottom:30px;">PROLOGUISTAS</h3>
+          <h3 class="text-center" style="margin-bottom:30px;"><?php echo the_field('header_prologuistas'); ?></h3>
           <?php
           if( have_rows('prologuistas') ):
               while ( have_rows('prologuistas') ) : the_row(); ?>

@@ -24,7 +24,7 @@
       left: 0
       .content
         +flex(column, space-between, start)
-        height: 300px
+        min-height: 300px
         max-height: 600px
         ul
           +flex(column, center, start)
@@ -47,6 +47,7 @@
                 padding-left: 3px
 
       div[role="form"]
+        width: 100%
         form
           input,
           textarea

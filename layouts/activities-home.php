@@ -1,7 +1,7 @@
 <div class="Activity">
   <div class="Activity-author col-md-2 col-lg-2">
     <header class="AuthorPhoto">
-      <img class="img" src="<?php echo get_template_directory_uri().'/assets/images/profile.svg' ?>" alt="" />
+      <img src="<?php echo the_author_image_url();?>" class="img" alt="<?php echo the_author(); ?>"  onerror="this.src = '<?php echo bloginfo("template_directory")."/assets/images/profile.jpg" ?>'">
     </header>
     <footer class="AuthorInfo">
       <small class="Date"> <?php the_time('j F, Y') ?> </small>
@@ -18,7 +18,7 @@
       <?php the_excerpt(); ?>
     </section>
     <footer class="ButtonActivity">
-      <a href=" <?php the_permalink() ?>" class="btn btn-primary">Participa !</a>
+      <a href=" <?php the_permalink() ?>" class="btn btn-primary">Participa</a>
     </footer>
   </div>
 

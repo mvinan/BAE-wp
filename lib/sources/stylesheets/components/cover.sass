@@ -41,7 +41,7 @@
     +flex(row, space-between, center)
   &-header
     position: relative
-    padding-right: 30px
+    padding-right: 120px
     padding-left: 30px
     left: 45px
     display: none
@@ -58,14 +58,13 @@
       bottom: 10px
       left: 150px
   &-image
-    // display: none
     border-radius: 3px
     box-shadow: 0px 2px 8px rgba($color_black, 0.3)
-    background-position: bottom center
+    background-position: center center
     background-repeat: no-repeat
     background-size: cover
-    height: 600px
-    width: 500px
+    height: 375px
+    width: 540px
     position: relative
     top: 0
     right: 0
@@ -92,6 +91,8 @@
 
 +desktop
   .CoverLiterature
+    &-image
+      top: 110px
     &-header
       .Title
         font-size: 60px !important

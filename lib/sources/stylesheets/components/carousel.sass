@@ -1,5 +1,5 @@
 .Literatura-carousel
-  height: 450px
+  height: 270px
   box-shadow: 0px 4px 8px rgba(0,0,0,0.3);
   border-radius: 3px
   overflow: hidden
@@ -26,10 +26,14 @@
           width: 100%
           transform: translate(0,0)
 
++tablet
+  .Literatura-carousel
+    height: 270px
+
 +desktop
   .Literatura-carousel
-    .carousel-inner
-      .item
-        .img-carousel
-          img
-            transform: translate(0,-20%)
+    height: 350px
+
++desktop-HD
+  .Literatura-carousel
+    height: 450px

@@ -9,20 +9,21 @@
 
   <!-- Wrapper for slides -->
   <div class="carousel-inner">
+    <?php
+    if( have_rows('carrusel') ):
+        while ( have_rows('carrusel') ) : the_row();
+          ?>
+            <div class="item">
+              <a href="<?php echo the_sub_field('url'); ?>" class="img-carousel"> 
+                <img src="<?php echo the_sub_field('image') ?> " alt="<?php echo the_sub_field('image_title'); ?>" title="<?php echo the_sub_field('image_title'); ?>">
+              </a>
+            </div>        
+          <?php
+        endwhile;
 
-    <?php rewind_posts(); ?>
-    <?php query_posts(array ('posts_per_page' => 4, 'post_type'=> 'literatura')) ?>
-    <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-
-      <div class="item">
-        <a href=" <?php the_permalink() ?> " class="img-carousel">
-          <?php the_post_thumbnail('large'); ?>
-        </a>
-			</div>
-
-			<?php endwhile; else : ?>
-				<p><?php _e( 'Lo sentimos, no hay portadas disponibles por el momento.' ); ?></p>
-			<?php endif; ?>
-
+    else :
+      ?> <p>No exiten imagenes por el momento.</p> <?php
+    endif;
+    ?>
   </div>
 </div>
