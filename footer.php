@@ -5,17 +5,34 @@
     <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 
       <?php
-        $thumb = wp_get_attachment_image_src( get_post_thumbnail_id( $post -> ID ), 'full-thumbnails' );
+        $thumb = wp_get_attachment_image_src( get_post_thumbnail_id( $post -> ID ), 'large' );
         $url = $thumb['0'];
       ?>
 
       <div class="Contact-wrapper" style="background-image:url( <?php echo $url ?> );">
           <article class="container">
-            <h4> Contáctanos </h4>
+            <h4><?php echo the_field('header_contact'); ?></h4>
+            <div style="margin-bottom:30px;"><?php echo the_field('contact_excerpt'); ?></div>
+            <div>
+              <?php
+              if( have_rows('contacts') ):
+                  while ( have_rows('contacts') ) : the_row(); ?>
+                    <ul>
+                      <li><?php the_sub_field('contact_name') ?></li>
+                      <li><?php the_sub_field('contact_phone') ?></li>
+                      <li><?php the_sub_field('contact_mail') ?></li>
+                    </ul>
+                  <?php endwhile;
+              else :
 
-            <?php the_content(); ?>
+                ?> <h3>No existen integrantes.</h3><?php
+              endif;
+              ?>
+            </div>
+            <div class="col-md-6">
+              <?php the_content(); ?>
+            </div>
           </article>
-
       </div>
 
     <?php endwhile; else : ?>
@@ -25,7 +42,6 @@
 
   </section>
   <div class="Copyright">
-
     <div class="container">
       <div class="Copyright-brand">
         <div class="Brand">
@@ -39,7 +55,6 @@
             <li><a href="//twitter.com/utpl" class="fa fa-twitter"></a></li>
           </ul>
         </div>
-
       </div>
     </div>
       <div class="Copyright-author">
@@ -50,10 +65,8 @@
           </div>
         </div>
       </div>
-
   </div>
 </footer>
-
 
 <?php wp_footer(); ?>
 

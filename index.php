@@ -7,12 +7,11 @@
   <div class="container">
     <article class="Description-content col-md-6 col-sm-6">
       <header>
-        <h2 class="Subtitle">¿Que és la biblioteca básica de autores ecuatorianos?</h2>
+        <h2 class="Subtitle"><?php echo the_field('title_description'); ?></h2>
       </header>
-
       <section class="u-whiteContent">
         <p class="Description-content--description">
-          <?php echo bloginfo('description') ?>
+          <?php echo the_field('descripcion'); ?>
         </p>
         <a href=" <?php echo get_page_link(2) ?> " class="btn btn-primary">Conoce Más</a>
       </section>

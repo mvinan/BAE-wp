@@ -72,3 +72,31 @@
   .current
     background: $color_cleangray
     color: $color_red
+
+//Social icons-list
+.share-links
+  +flex(row, center, center)
+  margin-bottom: 10px
+  a
+    margin-right: 0.3em
+    border-radius: 50%
+    width: 50px
+    height: 50px
+    background-color: white
+    +flex(row, center, center)
+    color: white
+    transition: 0.3s ease
+    &:hover
+      color: white !important
+    &.fa-facebook
+      background-color: $color_facebook
+      &:hover
+        background-color: lighten($color_facebook, 10%)
+    &.fa-twitter
+      background-color: $color_twitter
+      &:hover
+        background-color: lighten($color_twitter, 10%)
+    &.fa-google-plus
+      background-color: $color_google
+      &:hover
+        background-color: lighten($color_google, 10%)
